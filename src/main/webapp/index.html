@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+  Monisha
+</head>
+<body>
+Enter number one:<input type="number" id="num1" required autofocus>
+Enter number two:<input type="number" id="num2" required>
+<input type="button" value="add" onclick="compute();" id="btn">
+<input type="button" value="diff" onclick="compute();" id="btn">
+<input type="button" value="mul" onclick="compute();" id="btn"> 
+<input type="button" value="div" onclick="compute();" id="btn">
+  <div is="result">
+</div> 
+  <script>
+  function compute()
+    {
+      var n1=document.getElementById("num1").value
+      var n2=document.getElementById("num2").value
+      var bttn=document.getElementById("btn").value
+      var res;
+      if(bttn=="add")
+      res=+n1 + +n2;
+      else if(bttn=="diff")
+        res=+n1 - +n2;
+      else if(bttn=="mul")
+        res=+n1 * +n2;
+      else 
+         res=+n1 / +n2;
+      
+      alert("result is"+ res);
+      document.getElementById("result").innerText=res;
+    }
+  </script>
+</body>
+</html>
